@@ -132,6 +132,7 @@
 
 
         function activate() {
+            loginVm.selectedDate = new Date();
             // To initialize anything before the project starts
             doMapInitializations();
         }
