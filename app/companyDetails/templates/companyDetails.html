@@ -1,0 +1,81 @@
+<ion-view title={{pageTitle}}>
+	<ion-content class="">
+		<div class="ion-content ">
+			
+			<br><br>
+            <div class="row">
+			  <div class="col-20"></div>
+			  <div class="col registrationTitle heading">{{CompanyDetails.clickedCompany.name}}</div>
+			  <div class="col-20"></div>
+			</div><br>
+
+
+ <div class="row">
+	<div class="col-10"></div>
+  	<div class="col item item-body">
+    <img class="full-image" src="img/logo.jpg" ng-if="!CompanyDetails.clickedCompany.photo"> 
+    <img class="full-image" ng-src="{{CompanyDetails.serverUrl+CompanyDetails.clickedCompany.photo}}" ng-if="CompanyDetails.clickedCompany.photo">
+
+  </div>
+   <div class="col-10"></div>
+</div>
+<br>
+
+ <div class="row">
+	<div class="col-10"></div>
+    <p>
+     {{CompanyDetails.clickedCompany.description}}
+    </p>
+  </div>
+
+
+
+
+<div class="row">
+	<div class="col-10"></div>
+    <p>
+     {{CompanyDetails.clickedCompany.address}}
+    </p>
+  </div>
+  <div class="row">
+	<div class="col-10"></div>
+    <p>
+     {{CompanyDetails.clickedCompany.mail_id}}
+    </p>
+  </div>
+  <div class="row">
+	<div class="col-10"></div>
+    <p>
+     {{CompanyDetails.clickedCompany.phone_no}}
+    </p>
+  </div>
+    <div class="row">
+  	<div class="col-10"></div>
+      <p>
+       {{CompanyDetails.clickedCompany.website}}
+      </p>
+    </div>
+
+
+
+
+   <div class="col-10"></div>
+
+</div>
+
+
+<!--  <div class="row">
+	<div class="col-10"></div>
+    <img class="margin-right" ng-click="CompanyDetails.Gotopage()" src="img/left.png"> 
+  </div>
+   <div class="col-10"></div>
+
+</div>
+ -->
+			
+
+            
+  	
+		</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,105 @@
+<div ng-controller="SidebarController" class="sidebar" sidebar-directive="state">
+   <a href="" id="navigation-toggle" ng-click="toggleState()">&nbsp;</a>
+   <ul class="navigation">
+
+   	<li class="navigation-items" style="padding-top: 35px;"> 
+   		<img src="img/home.png" class="image-style float-left" style="padding-top: 7px" width="10%" />
+   		<a href="index.html#/home">Home</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/profile.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/profile">Profile</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/announcement.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/announcement">Announcement</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/notification.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/notification">Notification</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/about.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/about">About</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/help.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/help">Help</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/setting.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/setting">Settings</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/message.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/message">Messages</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/close.png" class="image-style float-left" width="10%" />
+   		<a href="" ng-click="logout()">Logout</a>
+   	</li>
+   </ul>
+</div>
+<ion-view title={{pageTitle}}>
+	<ion-content class="">
+		<div class="ion-content ">
+			<br>				
+			<div class="row after_border" ng-repeat="message in Message.messages" ng-if="Message.messages.length>0">
+				<div class="col-10"></div>
+				<div class="col">
+					<div class="row" >
+						<div class="col">
+							<img class="message-close-icon" src="img/close.png" ng-click="Message.deleteMessage(message)">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col" style="font-weight:bold;">
+							{{message.title}}
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							{{message.comppanyname}}
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							{{message.description}}
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							{{message.post}}
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							{{message.date}}
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							{{message.time}}
+						</div>
+					</div>
+
+				</div>
+				<div class="col-10"></div>
+  			</div>
+
+  			<div><br><center style="font-weight: bold;" ng-if="Message.messages.length==0">No new messages</center>
+  			</div>
+  			</div>	
+		
+
+		</div>
+	</ion-content>
+</ion-view>

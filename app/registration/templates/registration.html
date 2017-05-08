@@ -1,0 +1,48 @@
+  <ion-view title={{pageTitle}}>
+	<ion-content class="login-page">
+		<div class="ion-content  ">
+			<div class="row">
+			  <div class="col-20"></div>
+			  <div class="col registrationTitle heading">REGISTRATION</div>
+			  <div class="col-20"></div>
+			</div><br>
+			<div class="row">
+				<div class="col-20"></div>
+				<div class="col">
+				<input type="text" class="emailimage text_padding" ng-model="Registration.newUser.name" placeholder="Name">
+                </div>
+                <div class="col-20"></div>
+			</div><br>
+			<div class="row">
+				<div class="col-20"></div>
+				<div class="col">
+				<input type="text" class="emailimage text_padding" ng-model="Registration.newUser.email_id" placeholder="Email Address">
+                </div>
+                <div class="col-20"></div>
+			</div><br>
+			<div class="row">
+				<div class="col-20"></div>
+				<div class="col">
+				<input type="password" class="passwordimage text_padding"ng-model="Registration.newUser.password"  placeholder="Password">
+                </div>
+                <div class="col-20"></div>
+			</div><br>
+			<div class="row">
+				<div class="col-20"></div>
+				<div class="col">
+				<input type="password" class="passwordimage text_padding" ng-model="Registration.newUser.confirmPassword"  placeholder=" Confirm Password">
+                </div>
+                <div class="col-20"></div>
+			</div><br>
+			<div class="row">
+				<div class="col-20"></div>
+				<div class="col">
+				<button class="button button-block button-royal button-login" ng-click="Registration.addNewUser()">
+                SIGNUP
+                </button>
+                </div>
+                <div class="col-20"></div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

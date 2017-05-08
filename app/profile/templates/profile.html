@@ -1,0 +1,190 @@
+<div ng-controller="SidebarController" class="sidebar" sidebar-directive="state">
+   <a href="" id="navigation-toggle" ng-click="toggleState()">&nbsp;</a>
+   <ul class="navigation">
+
+   	<li class="navigation-items" style="padding-top: 35px;"> 
+   		<img src="img/home.png" class="image-style float-left" style="padding-top: 7px" width="10%" />
+   		<a href="index.html#/home">Home</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/profile.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/profile">Profile</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/announcement.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/announcement">Announcement</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/notification.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/notification">Notification</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/about.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/about">About</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/help.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/help">Help</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/setting.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/setting">Settings</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/message.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/message">Messages</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/close.png" class="image-style float-left" width="10%" />
+   		<a href="" ng-click="logout()">Logout</a>
+   	</li>
+   </ul>
+</div>
+<ion-view title={{pageTitle}}>
+	<ion-content class="">
+		<div class="ion-content ">
+			<!-- <div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col"><center><h4>
+					EDIT PROFILE</h4>
+					</center>
+				</div>
+				<div class="col-10">
+				</div>
+			</div> --><br><br>
+
+            <div class="row">	
+            </div>
+
+
+
+            <div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col"><center>
+					<img style="width:100%;" ng-src="{{Profile.userImage}}" alt="dp"></center>
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col-30">Name          
+				</div>
+				<div class="col-10">  :
+				</div>
+				<div class="col-40">{{Profile.userDetails.name}}
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col-30">Address       
+				</div>
+				<div class="col-10">  :
+				</div>
+				<div class="col-40">{{Profile.userDetails.address}}
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col-30">DOB           
+				</div>
+				<div class="col-10">  :
+				</div>
+				<div class="col-40">{{Profile.userDetails.dob}}
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+			<br>
+			<!-- <div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col-30">Age
+				</div>
+				<div class="col-10">
+				</div>
+				<div class="col-40">{{Profile.userDetails.age}}
+				</div>
+				<div class="col-10">
+				</div>
+			</div> -->
+			<br>
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col-30">Phone       
+				</div>
+				<div class="col-10">  :
+				</div>
+				<div class="col-40">{{Profile.userDetails.phone}}
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col-30">Experience 
+				</div>
+				<div class="col-10">  :
+				</div>
+				<div class="col-40">{{Profile.userDetails.experience}}
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col-30">Qualification 
+				</div>
+				<div class="col-10">  :
+				</div>
+				<div class="col-40">{{Profile.userDetails.qualification}}
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col">
+					<center>
+						<input type="button" class="userimage button button-clear button-assertive" name="Update" value="Update" ng-click="Profile.updateProfile()" style="float: right;" >
+						
+						
+						</input>
+					</center>
+				</div>
+				<div class="col-10">
+				</div>
+			</div><br>
+
+  	
+		</div>
+	</ion-content>
+</ion-view>

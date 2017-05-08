@@ -1,0 +1,48 @@
+<ion-view title={{pageTitle}}>
+	<ion-content class="login-page setlocation-page">
+		<div class="ion-content ">
+			<div class="row">
+				<div class="col">
+					<input id="pac-input" class="map-search-bar" type="text" placeholder="Enter Location">
+					<div id="map" class="select-location"></div>
+				</div>
+			</div>
+
+			<div style="margin-top:30px;"></div>
+
+			<div class="set-location-tiles">
+				<div class="row upper-tile">
+					<div class="col align-center tile00">
+						<div class="tile-smaller-font">DATE</div>
+						<input class="promo-code-input align-center" type="date" placeholder="Date" />
+					</div>
+
+					<div class="col align-center">
+						<div class="tile-smaller-font">NO OF PROFESSIONALS</div>
+						<input class="promo-code-input align-center" type="number" placeholder="Number" />
+					</div>
+				</div>
+
+				<div class="row ">
+					<div class="col align-center tile00">
+						<div class="tile-smaller-font">TIME</div>
+						<input class="promo-code-input align-center" type="text" placeholder="Time" />
+					</div>
+
+					<div class="col align-center">
+						<input class="promo-code-input align-center" type="text" placeholder="Have a promo code?" />
+					</div>
+				</div>
+			</div>
+
+			<div class="row ">
+				<div class="col">
+					<img class="cursor-pointer" src="img/book-service-button.png" width="100%" ng-click="SetLocation.goToPaymentPage()">
+				</div>
+			</div>
+
+		</div>
+	</ion-content>
+</ion-view>
+
+

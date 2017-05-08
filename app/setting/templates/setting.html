@@ -1,0 +1,109 @@
+<div ng-controller="SidebarController" class="sidebar" sidebar-directive="state">
+   <a href="" id="navigation-toggle" ng-click="toggleState()">&nbsp;</a>
+   <ul class="navigation">
+
+   	<li class="navigation-items" style="padding-top: 35px;"> 
+   		<img src="img/home.png" class="image-style float-left" style="padding-top: 7px" width="10%" />
+   		<a href="index.html#/home">Home</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/profile.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/profile">Profile</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/announcement.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/announcement">Announcement</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/notification.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/notification">Notification</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/about.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/about">About</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/help.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/help">Help</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/setting.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/setting">Settings</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/message.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/message">Messages</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/close.png" class="image-style float-left" width="10%" />
+   		<a href="" ng-click="logout()">Logout</a>
+   	</li>
+   </ul>
+</div>
+<ion-view title={{pageTitle}}>
+	<ion-content class="">
+		<div class="ion-content ">
+
+
+			<div class"row">
+				<div class="col-20"></div>
+				<div class="col">
+
+				<img src="img/logoorginal.png" class="setting_icon"></img>	Hey there! I am using GetJob.
+
+				</div>
+				<div class="col-20"></div>
+
+
+				<div class="after_border">
+
+</div>
+			
+			<div class="row">
+				<div class="col-20"></div>
+				<div class="col">
+					<img src="img/password.png" class="margin-right icon_settings"></img></div>
+					<div class="col">
+					<input type="button" class="userimage button button-clear button-assertive" name="Change Password" value="Change Password" ng-click="Setting.Change()" style="float: right;" ></div>
+				<!-- <button class="button button-block button-royal button-login button_font_color" ng-click="Setting.Change()">
+                Change Password
+                </button> -->
+                </div>
+                <div class="col-40"></div>
+			</div>
+
+
+<div class="after_border">
+
+</div>
+			
+			<div class="row">
+				<div class="col-20"></div>
+				<div class="col">
+					<img src="img/notification.png" class="margin-right icon_settings"></img></div>
+					<div class="col">
+					<input type="button" class="userimage button button-clear button-assertive" name="Notification" value="Notification" ng-click="Setting.ChangeNotification()" style="float: right;" ></div>
+				<!-- <button class="button button-block button-royal button-login button_font_color" ng-click="Setting.Change()">
+                Notification
+                </button> -->
+                </div>
+                <div class="col-50"></div>
+			</div>
+
+
+			<div class="after_border">
+
+</div>
+
+
+		</div>
+	</ion-content>
+</ion-view>

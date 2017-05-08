@@ -1,0 +1,43 @@
+<ion-view title={{pageTitle}}>
+	<ion-content class="">
+		<div class="ion-content">
+			
+			
+<div class="list" style="color:white;">
+  <label class="item item-input item-floating-label" >
+    <span class="input-label" style="color:white;">Subject</span>
+    <input type="text" placeholder="Subject" class="font-change-color" style="color:white;" ng-model="Feedback.feedbackSubject"/>
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label" style="color:white;">Discription</span>
+    <textarea placeholder="Discription" class="background-modify" style="color:white;" ng-model="Feedback.feedbackDescription"></textarea>
+    </label>    
+</div>
+  
+  <label class="item item-input item-select">
+    <div class="input-label" style="color:white;">
+      Category
+    </div>
+    <select ng-model="Feedback.category" class="background-modify feedback-select-box" ng-change="Feedback.selectBoxChanged()">
+      <option>Admin</option>
+      <option>Company</option>
+    </select>
+  </label>
+
+<label class="item item-input item-select" ng-if="Feedback.showCompanyName">
+    <div class="input-label">
+      Company Name
+    </div>
+    <select class="background-modify feedback-select-box" ng-model="Feedback.companyName">
+      <option>Company 1</option>
+      <option>Company 2</option>
+    </select>
+  </label>
+
+<div><button class="button button-block button-positive" ng-click="Feedback.sendFeedback()">
+  Submit
+</button>
+</div>
+		</div>
+	</ion-content>
+</ion-view>

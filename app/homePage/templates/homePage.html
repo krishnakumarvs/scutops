@@ -1,0 +1,127 @@
+<div ng-controller="SidebarController" class="sidebar" sidebar-directive="state">
+   <a href="" id="navigation-toggle" ng-click="toggleState()">&nbsp;</a>
+   <ul class="navigation">
+
+   	<li class="navigation-items" style="padding-top: 35px;"> 
+   		<img src="img/home.png" class="image-style float-left" style="padding-top: 7px" width="10%" />
+   		<a href="index.html#/home">Home</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/profile.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/profile">Profile</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/announcement.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/announcement">Announcement</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/notification.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/notification">Notification</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/about.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/about">About</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/help.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/help">Help</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/setting.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/setting">Settings</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/message.png" class="image-style float-left" width="10%" />
+   		<a href="index.html#/message">Messages</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/close.png" class="image-style float-left" width="10%" />
+   		<a href="" ng-click="logout()">Logout</a>
+   	</li>
+   </ul>
+</div>
+<ion-view title={{pageTitle}}>
+	<ion-content class="tasks-page">
+		<div class="ion-content">
+
+
+			<div class="row">
+				<div class="col-20"></div>
+				<div class="col heading" style="font-weight: bold;"><center>COMPANYS</cender></div>
+				<div class="col-20"></div>
+			</div>
+
+			<div class="row">
+			    <div class="col-10"></div>
+			    <div class="col">
+					<div class="list list-inset tt">
+                		<label class="item item-input">
+                		<i class="icon ion-search placeholder-icon"></i>
+                		<input type="text" placeholder="Search" width="100%" ng-model="searchKey">
+                		</label>
+           			</div>
+           		</div>
+            	<div class="col-10"></div>
+			</div>
+
+			<div class="row" ng-if="Home.recentInterviews && Home.recentInterviews.length>0" style="margin-top:5px;">
+
+				<div class="col-10">
+				</div>
+				<div class="col-80" style="    background-color: rgba(178, 156, 221, 0.64);border-radius: 20px;">
+					<center style="background-color: red;border-radius: 20px;">NOTIFICATIONS</center>
+					<div class="row" ng-repeat="interview in Home.recentInterviews">
+						<div class="col">{{interview.description}}
+						</div>
+					</div>
+
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+
+			<br>
+
+			<div class="after_border">
+				
+				<a class="item item-thumbnail-left" ng-click="Home.goToCompanyDetails(company)" ng-repeat="company in Home.allCompanies | filter : searchKey">
+			      <img src="img/logo.jpg" ng-if="!company.photo">
+			      <img ng-src="{{Home.serverUrl+company.photo}}" ng-if="company.photo">
+
+			      <h2>{{company.name}}</h2>
+			      <div style="white-space: pre-line;">{{company.description}}</div>
+			    </a>
+			    
+			  <!-- <a class="item item-thumbnail-left" ng-click="Home.goToCompanyDetails()">
+			    <img src="img/logo.jpg">
+			    <h2>Company name</h2>
+			    <p>Discription</p>
+			  </a> -->
+
+			</div>
+
+
+           
+
+
+
+
+
+
+			<!-- <div class="row">
+				<div class="col-10"></div>
+				<div class="col pic"><br><br><br><img src="img/logo.jpg" width="100%"></img></div>
+				<div class="col-10"></div>
+			</div> -->
+
+	 	 </div>
+	</ion-content>
+</ion-view>

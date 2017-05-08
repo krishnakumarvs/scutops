@@ -1,0 +1,165 @@
+<div ng-controller="SidebarController" class="sidebar" sidebar-directive="state">
+	<div class="header-bar">
+	</div>
+   <a href="" id="navigation-toggle" ng-click="toggleState()">&nbsp;</a>
+   <div class="header-title">ScutOps
+   </div>
+   <div>
+   	<img src="img/notification-icon.png" class="header-notification-icon" width="100%">
+   </div>
+   <ul class="navigation">
+
+   	<li class="navigation-items" style="padding-top: 35px;"> 
+   		<img src="img/home.png" class="image-style float-left" style="padding-top: 7px" width="10%" />
+   		<a href="">Bookings</a>
+   	</li>
+
+   	<li class="navigation-items" style="	"> 
+   		<img src="img/home.png" class="image-style float-left" style="padding-top: 7px" width="10%" />
+   		<a href="">Promotions</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/profile.png" class="image-style float-left" width="10%" />
+   		<a href="">My Profile</a>
+   	</li>
+
+   	
+
+   	<li class="navigation-items"> 
+   		<img src="img/about.png" class="image-style float-left" width="10%" />
+   		<a href="">Settings</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/help.png" class="image-style float-left" width="10%" />
+   		<a href="">Help</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/help.png" class="image-style float-left" width="10%" />
+   		<a href="">Feedback</a>
+   	</li>
+
+   	<li class="navigation-items"> 
+   		<img src="img/close.png" class="image-style float-left" width="10%" />
+   		<a href="" ng-click="logout()">Logout</a>
+   	</li>
+   </ul>
+</div>
+
+<ion-view title={{pageTitle}}>
+	<ion-content class="">
+		<div class="ion-content dashboard">
+			<div class="global-page-top-margin"></div>
+
+			<div class="row">
+				<div class="col">
+					<img src="img/block-icon.png" class="subtitle-icon" /> 
+					<div class="subtitle-text">Choose your service
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+			  	<img src="img/coocking-icon.png" width="100%">
+				</div>
+			  <div class="col">
+			  	<img src="img/cleaning-icon.png" width="100%">
+			  </div>
+			  <div class="col">
+			  	<img src="img/spcialized-cooking-icon.png" width="100%">
+			  </div>
+			  <div class="col">
+			  	<img src="img/specialized-cleaning-icon.png" width="100%">
+			  </div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<img src="img/instructions-logo.png" class="subtitle-icon" /> 
+					<div class="subtitle-text">Instructions
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<textarea class="instructions-input" placeholder="Enter the instructions to be passed on to the professional"></textarea>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<img src="img/block-icon.png" class="subtitle-icon" /> 
+					<div class="subtitle-text">Choose Cuisine
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+			  	<img src="img/kichen-icon.png" width="100%">
+				</div>
+			  <div class="col">
+			  	<img src="img/bedroom-icon.png" width="100%">
+			  </div>
+			  <div class="col">
+			  	<img src="img/living-room-icon.png" width="100%">
+			  </div>
+			  <div class="col">
+			  	<img src="img/diing-room-icon.png" width="100%">
+			  </div>
+			</div>
+
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col">
+					<img class="cursor-pointer" src="img/book-service-button.png" width="100%" ng-click="Dashboard.gotoSetLocationPage()">
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+
+
+
+			
+
+			<!-- <div class="row">
+				<div class="col-20">
+				</div>
+			  <div class="col">
+			  	<img src="img/scutops-logo.png" width="100%">
+			  </div>
+			  <div class="col-20">
+			  </div>
+			</div> --> 
+
+
+		</div>
+	</ion-content>
+	<div class="row scutops-color bottom-navigation-bar">
+		<div class="col align-center each-nav-icon">
+			<img src="img/home-icon.png" class="bottom-navigation-icons">
+			<div>Home</div>
+		</div>
+		<div class="col align-center each-nav-icon">
+			<img src="img/history-icon.png" class="bottom-navigation-icons">
+			<div>History</div>
+		</div>
+		<div class="col align-center each-nav-icon">
+			<img src="img/account-icon.png" class="bottom-navigation-icons">
+			<div>Account</div>
+		</div>
+		<div class="col align-center each-nav-icon">
+			<img src="img/settings-icon.png" class="bottom-navigation-icons">
+			<div>Settings</div>
+		</div>
+	</div>
+</ion-view>
+
+
+
+

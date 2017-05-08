@@ -1,0 +1,206 @@
+  <ion-view title={{pageTitle}}>
+	<ion-content class="">
+		<div class="ion-content ">
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col heading"><center><h4>
+					EDIT PROFILE</h4>
+					</center>
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+
+            <div class="row">
+            </div>
+
+            <div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col-40">
+					<img style="width:100%;" ng-src="{{EditProfile.userImage}}" >
+				</div>
+				<div class="col-40">
+					<form enctype="multipart/form-data" method="post">
+						<input type="file" class="button-assertive " name="upfile" value="Upload" id="fileupload" ng-model="UnionPost.filee">
+					</form>
+				</div>
+				<div class="col-10">
+				</div>
+			</div><br>
+
+
+
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col">
+					<h6>Name
+					</h6>
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col">
+				<input type="text" class="userimage text_padding" placeholder="User name" name="name" ng-model="EditProfile.userDetails.name">
+					</input>
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col">
+					<h6>Address
+					</h6>
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col">
+				<textarea class="userimage textarea_padding" placeholder="Address" name="address" ng-model="EditProfile.userDetails.address"></textarea>
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col">
+					<h6>Date of birth
+					</h6>
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col">
+				<input type="text" class="userimage text_padding" placeholder="dd-mm-yyyy" name="dob" ng-model="EditProfile.userDetails.dob">
+					</input>
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col">
+					<h6>Email Id
+					</h6>
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col">
+				<input type="text" class="userimage text_padding" placeholder="Age" name="age" ng-model="EditProfile.userDetails.email_id">
+					</input>
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col">
+					<h6>Phone
+					</h6>
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col">
+				<input type="text" class="userimage text_padding" placeholder="Phone" name="phone" ng-model="EditProfile.userDetails.phone">
+					</input>
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+
+			
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col">
+					<h6>Experience
+					</h6>
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col">
+				<input type="text" class="userimage text_padding" placeholder="Experience" name="experience" ng-model="EditProfile.userDetails.experience">
+					</input>
+				</div>
+				<div class="col-10">
+				</div>
+			</div>  
+
+
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col">
+					<h6>Qualification
+					</h6>
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col">
+				<input type="text" class="userimage text_padding" placeholder="Qualification" name="qualification" ng-model="EditProfile.userDetails.qualification">
+					</input>
+				</div>
+				<div class="col-10">
+				</div>
+			</div>  	
+			
+
+
+			<div class="row">
+				<div class="col-10">
+				</div>
+				<div class="col">
+					<center>
+						<input type="button" class="userimage button button-clear button-assertive" name="Update" value="Update" ng-click="EditProfile.editUserDetails()" style="float: right;" />
+						
+					</center>
+				</div>
+				<div class="col-10">
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
