@@ -10,9 +10,9 @@
          */
         .controller('SetLocationController', SetLocation);
 
-    SetLocation.$inject = ['$state', '$filter', '$http', 'config', '$location', '$scope', '$compile'];
+    SetLocation.$inject = ['$state', '$filter', '$http', 'config', '$location', '$scope', '$compile','$window'];
 
-    function SetLocation($state, $filter, $http, config, $location, $scope, $compile) {
+    function SetLocation($state, $filter, $http, config, $location, $scope, $compile, $window ) {
         var loginVm = this;
         // Variable declarations
         loginVm.currentUser = {};
@@ -110,6 +110,11 @@
                 });
                 map.fitBounds(bounds);
             });
+            /*setTimeout(function(){ 
+                console.log("Hello"); 
+                $window.location.reload();
+        }, 1000);*/
+            
         }
 
         function doMapInitializations() {
@@ -133,8 +138,12 @@
 
         function activate() {
             loginVm.selectedDate = new Date();
-            // To initialize anything before the project starts
             doMapInitializations();
+                /*setTimeout(function(){ 
+                    console.log("Loading......"); 
+                    
+            }, 1000);*/
+            // To initialize anything before the project starts
         }
 
         function authinticateUser() {

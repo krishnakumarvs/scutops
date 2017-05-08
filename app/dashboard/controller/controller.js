@@ -10,9 +10,9 @@
          */
         .controller('DashboardController', Dashboard);
 
-    Dashboard.$inject = ['$state', '$filter', '$http', 'config', '$location'];
+    Dashboard.$inject = ['$state', '$filter', '$http', 'config', '$location', '$window'];
 
-    function Dashboard($state, $filter, $http, config, $location) {
+    function Dashboard($state, $filter, $http, config, $location, $window) {
         var loginVm = this;
         // Variable declarations
         loginVm.currentUser = {};
@@ -29,7 +29,11 @@
         activate();
 
         function gotoSetLocationPage() {
-            $state.go("set-location");
+            /*$state.go("set-location");*/
+            $location.path('/set-location');
+            var url = "http://" + $window.location.host + "/scutops/index.html#/set-location";
+            /*$log.log(url);*/
+            $window.location.href = url;
         }
 
         function changeServerIp() {
