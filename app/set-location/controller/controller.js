@@ -27,7 +27,7 @@
         activate();
 
         function initialize() {
-            console.log("initialize map");
+            console.log("initialize map.........................");
             var myLatlng = new google.maps.LatLng(9.9971, 76.3028);
 
             var mapOptions = {
@@ -110,15 +110,18 @@
                 });
                 map.fitBounds(bounds);
             });
-            /*setTimeout(function(){ 
-                console.log("Hello"); 
-                $window.location.reload();
-        }, 1000);*/
+            setTimeout(function(){ 
+                console.log("Resizing......"); 
+                google.maps.event.trigger(map, 'resize');
+        }, 1000);
             
         }
 
         function doMapInitializations() {
-            google.maps.event.addDomListener(window, 'load', initialize);
+                setTimeout(function(){ 
+                    initialize();
+            }, 1000);
+            /*google.maps.event.addDomListener(window, 'load', initialize);*/
 
             $scope.centerOnMe = function() {
                 if (!$scope.map) {

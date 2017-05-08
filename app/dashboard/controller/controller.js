@@ -31,9 +31,6 @@
         function gotoSetLocationPage() {
             /*$state.go("set-location");*/
             $location.path('/set-location');
-            var url = "http://" + $window.location.host + "/scutops/index.html#/set-location";
-            /*$log.log(url);*/
-            $window.location.href = url;
         }
 
         function changeServerIp() {
