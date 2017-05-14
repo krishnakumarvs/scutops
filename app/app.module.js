@@ -199,28 +199,19 @@ angular.module(appName, ['ionic'])
         title: 'REGISTRATION'
     })
 
-    .state('forgot', {
-        url: "/forgot",
-        templateUrl: "app/registration/templates/forgot-new.html",
-        controller: 'ForgotController as Forg',
-        title: 'Forgot password'
-    })
-
-
-    .state('forgotPassword', {
-        url: "/forgotPassword",
-        templateUrl: "app/forgotPassword/templates/forgotPassword.html",
-        controller: 'ForgotPasswordController as ForgotPassword',
-        title: 'FORGOTPASSWORD'
-    })
-
-
     .state('settings', {
         url: "settings",
         parent: 'header',
         showHeader: true,
         title: 'SETTINGS',
         templateUrl: "app/settings/templates/settings.html",
+        controller: 'SettingsController as Settings'
+    })
+
+    .state('payment', {
+        url: "/payment",
+        title: 'payment',
+        templateUrl: "app/payment/templates/payment.html",
         controller: 'SettingsController as Settings'
     });
 
