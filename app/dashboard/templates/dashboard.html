@@ -47,7 +47,7 @@
 </div>
 
 <ion-view title={{pageTitle}}>
-	<ion-content class="" ng-init="Login.mode='cooking'">
+	<ion-content class="" ng-init="Login.userSelection={}">
 		<div class="ion-content dashboard">
 			<div class="global-page-top-margin"></div>
 
@@ -60,16 +60,16 @@
 			</div>
 
 			<div class="row">
-				<div class="col">
+				<div class="col each-column">
 					<div>
-						<img src="img/coocking-icon.png" class="cursor-pointer" width="100%" ng-click="Login.mode='cooking'">
-						<img src="img/tic-icon.png" class="selected-icon" ng-if="Login.mode=='cooking'">
+						<img src="img/coocking-icon.png" class="cursor-pointer" width="100%" ng-click="Login.cooking=!Login.cooking">
+						<img src="img/tic-icon.png" class="selected-icon" ng-if="Login.cooking">
 					</div>
 				</div>
-			  <div class="col">
+			  <div class="col each-column">
 			  	<div>
-			  		<img src="img/cleaning-icon.png" class="cursor-pointer" width="100%" ng-click="Login.mode='cleaning'">
-			  		<img src="img/tic-icon.png" class="selected-icon" ng-if="Login.mode=='cleaning'">
+			  		<img src="img/cleaning-icon.png" class="cursor-pointer" width="100%" ng-click="Login.cleaning=!Login.cleaning">
+			  		<img src="img/tic-icon.png" class="selected-icon" ng-if="Login.cleaning">
 			  	</div>
 			  </div>
 			  <div class="col">
@@ -109,43 +109,106 @@
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="col">
-					<img src="img/block-icon.png" class="subtitle-icon" /> 
-					<div class="subtitle-text">Choose <span ng-if="Login.mode=='cooking'">Cuisine</span><span ng-if="Login.mode=='cleaning'">Area</span>
+			<div ng-if="Login.cleaning">
+				<div class="row">
+					<div class="col">
+						<img src="img/block-icon.png" class="subtitle-icon" /> 
+						<div class="subtitle-text">Choose Area
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="row" ng-if="Login.mode=='cleaning'">
-				<div class="col">
-			  	<img src="img/kichen-icon.png" width="100%">
-				</div>
-			  <div class="col">
-			  	<img src="img/bedroom-icon.png" width="100%">
-			  </div>
-			  <div class="col">
-			  	<img src="img/living-room-icon.png" width="100%">
-			  </div>
-			  <div class="col">
-			  	<img src="img/diing-room-icon.png" width="100%">
-			  </div>
-			</div>
+				<div class="row">
 
-			<div class="row" ng-if="Login.mode=='cooking'">
-				<div class="col">
-			  	<img src="img/break-fast-icon.png" width="100%">
+				  <div class="col each-column-cleaning">
+				  	<img src="img/bedroom-icon.png" width="100%" ng-click="Login.userSelection.bedroom=!Login.userSelection.bedroom">
+				  	<img src="img/tic-icon.png" class="selected-icon" ng-if="Login.userSelection.bedroom">
+				  </div>
+
+				  <div class="col each-column-cleaning">
+				  	<img src="img/living-room-icon.png" width="100%" ng-click="Login.userSelection.living=!Login.userSelection.living">
+				  	<img src="img/tic-icon.png" class="selected-icon" ng-if="Login.userSelection.living">
+				  </div>
+
+				  <div class="col each-column-cleaning" >
+				  	<img src="img/diing-room-icon.png" width="100%" ng-click="Login.userSelection.diing=!Login.userSelection.diing">
+				  	<img src="img/tic-icon.png" class="selected-icon" ng-if="Login.userSelection.diing">
+				  </div>
+
+				  	<div class="col each-column-cleaning">
+				    	<img src="img/washroom.png" width="100%" ng-click="Login.userSelection.washroom=!Login.userSelection.washroom">
+				    	<img src="img/tic-icon.png" class="selected-icon" ng-if="Login.userSelection.washroom">
+				  	</div>
+
 				</div>
-			  <div class="col">
-			  	<img src="img/lunch-icon.png" width="100%">
-			  </div>
-			  <div class="col">
-			  	<img src="img/dinner-icon.png" width="100%">
-			  </div>
-			  <div class="col">
-			  	<img src="img/snacks-icon.png" width="100%">
-			  </div>
+
+				<div class="row dashbard-image-row" >
+					<div class="col">
+				  	<span class="dashbard-image-titles">BEDROOM</span>
+					</div>
+				  <div class="col">
+				  	<span class="dashbard-image-titles">LIVING ROOM</span>
+				  </div>
+				  <div class="col">
+				  	<span class="dashbard-image-titles">DINING AREA</span>
+				  </div>
+				  <div class="col">
+				  	<span class="dashbard-image-titles">WASHROOM</span>
+				  </div>
+				</div>
+
 			</div>
+			
+			<div ng-if="Login.cooking">
+				<div class="row">
+					<div class="col">
+						<img src="img/block-icon.png" class="subtitle-icon" /> 
+						<div class="subtitle-text">Choose Cuisine
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col each-cuisine-column">
+				  	<img src="img/break-fast-icon.png" width="100%" ng-click="Login.userSelection.breakFast=!Login.userSelection.breakFast">
+				  	<img src="img/tic-icon.png" class="selected-icon" ng-if="Login.userSelection.breakFast">
+					</div>
+
+				  <div class="col each-cuisine-column">
+				  	<img src="img/lunch-icon.png" width="100%" ng-click="Login.userSelection.lunch=!Login.userSelection.lunch">
+				  	<img src="img/tic-icon.png" class="selected-icon" ng-if="Login.userSelection.lunch">
+				  </div>
+
+				  <div class="col each-cuisine-column">
+				  	<img src="img/dinner-icon.png" width="100%" ng-click="Login.userSelection.dinner=!Login.userSelection.dinner">
+				  	<img src="img/tic-icon.png" class="selected-icon" ng-if="Login.userSelection.dinner">
+				  </div>
+
+				  <div class="col each-cuisine-column">
+				  	<img src="img/snacks-icon.png" width="100%" ng-click="Login.userSelection.snacks=!Login.userSelection.snacks">
+				  	<img src="img/tic-icon.png" class="selected-icon" ng-if="Login.userSelection.snacks">
+				  </div>
+				</div>
+
+				<div class="row dashbard-image-row" >
+					<div class="col dashbard-image-cols">
+				  	<span class="dashbard-image-titles">BREAKFAST</span>
+					</div>
+				  <div class="col dashbard-image-cols">
+				  	<span class="dashbard-image-titles">LUNCH</span>
+				  </div>
+				  <div class="col dashbard-image-cols">
+				  	<span class="dashbard-image-titles">DINNER</span>
+				  </div>
+				  <div class="col dashbard-image-cols">
+				  	<span class="dashbard-image-titles">SNACKS</span>
+				  </div>
+				</div>
+
+			</div>
+			
+
+			
 
 			<div class="row">
 				<div class="col-10">

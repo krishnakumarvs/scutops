@@ -141,6 +141,7 @@
 
         function activate() {
             loginVm.selectedDate = new Date();
+            document.getElementById('datePicker').valueAsDate = new Date();
             doMapInitializations();
                 /*setTimeout(function(){ 
                     console.log("Loading......"); 

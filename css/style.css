@@ -1517,10 +1517,16 @@ path.medium-entry {
 .dashbard-image-cols {
   padding-top: 0px;
   text-align: center; 
+  height: 40px!important;
 }
 
 .row.dashbard-image-row {
   margin-top: -20px !important;
+  height: 80px;
+}
+
+.each-column-cleaning {
+  height: 80px!important;
 }
 
 .selected-icon {
@@ -1528,4 +1534,11 @@ path.medium-entry {
       position: relative;
       top: -64px;
       left: 43px;
+}
+.each-column {
+  height: 40px !important;
+}
+
+.each-cuisine-column {
+  height: 88px !important
 }
