@@ -1508,3 +1508,24 @@ path.medium-entry {
 .consumes-chart .consumes-box, .daily-history li .col{
     text-transform: uppercase;
 }
+
+.dashbard-image-titles {
+  font-size: 10px;
+  line-height: 0px;
+}
+
+.dashbard-image-cols {
+  padding-top: 0px;
+  text-align: center; 
+}
+
+.row.dashbard-image-row {
+  margin-top: -20px !important;
+}
+
+.selected-icon {
+  width: 16px;
+      position: relative;
+      top: -64px;
+      left: 43px;
+}
