@@ -419,3 +419,26 @@ input.map-search-bar {
   border: 1px solid rgba(0, 0, 0, 0.34);
   /*border-top: 1px solid rgba(0, 0, 0, 0.34);*/
 }
+
+.payment-button {
+  border: none;
+  color: white;
+  background: #b6015d;
+ padding: 9px 7px;
+ border-radius: 5px;
+font-size: 9px;
+}
+
+.proceed-to-pay{
+  color:#b6015d;
+  background-color: #f7c773;
+  padding-bottom:px;
+}
+
+.other-payment-modes{
+      font-size: 3mm;
+}
+div.row.proceed-to-pay-basic{
+  font-size: 12px;
+  padding-top:10px; !important;
+}
